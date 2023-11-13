@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>My Web Components</title>
+		<script type="module" src="./components/button/button.js"></script>
+		<script type="module" src="./components/card/card.js"></script>
+		<style>
+			body {
+				background-color: #f5f5f7;
+			}
+			.card{
+				--background-color-primary:black;
+				--background-color-secondary:blue;
+			}
+			.container {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				gap: 1rem;
+				max-width: 980px;
+				margin: 4rem auto;
+			}
+			.button-container {
+				display: grid;
+				width: 100%;
+				row-gap: 1rem;
+				align-items: center;
+				grid-template-columns: repeat(3, 1fr);
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="button-container">
+			<my-button title="my button" color="#0071e3"></my-button>
+			<my-button title="my button" color="salmon"></my-button>
+			<my-button title="my button" color="red"></my-button>
+		</div>
+		<div class="container">
+			<my-card title="Person Card" body="This is a person"> </my-card>
+			<my-card title="Vehicle Card" body="This a car"> </my-card>
+		</div>
+	</body>
+</html>
